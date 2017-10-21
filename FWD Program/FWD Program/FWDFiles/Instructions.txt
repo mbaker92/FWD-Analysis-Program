@@ -1,0 +1,61 @@
+PURPOSE - This program is used to create a summary/analysis excel file for a selected FWD access database export
+
+REQUIREMENTS -
+	Microsoft Excel
+	Microsoft Access
+	A FWD database with the following tables:
+		- Drops
+		- Sessions
+		- Stations
+		- Remarks
+
+OUTPUT- An Excel file with a summary/analysis.
+
+INITIAL SETTINGS -
+Excel and Access will need to have a few changes in order for the FWD Program to run.
+
+	EXCEL -
+		*Step 1: Open Excel with a new "Blank Workbook"
+		*Step 2: Click on "File" and choose "Options"
+		*Step 3: Choose Trust Center from the menu on the left and click on "Trust Center Settings"
+		*Step 4: Choose "Trusted Locations" from the left menu. If the parent folder, with subfolders enabled,
+			or the folder of the files used for the program is not in the list, add the parent 
+			folder with the subfolder option enabled or the folder itself.
+			  - To add a parent folder, choose "Add New Location" and add the folder with the "Subfolders 
+			    of this location are also trusted" option check.
+			  - To add the folder itself, choose "Add New Location" and add the folder.
+		*Step 5: Click "OK" on the Trust Center window.
+		*Step 6: Click "OK" on the Excel Options window and close the document.
+
+	ACCESS -
+		*Step 1: Open Access with a new database.
+		*Step 2: Click on "File" and choose "Options".
+		*Step 3: Choose Trust Center from the menu on the left and click on "Trust Center Settings"
+		*Step 4: Choose "Trusted Locations" from the left menu. If the parent folder, with subfolders enabled,
+			or the folder of the files used for the program is not in the list, add the parent 
+			folder with the subfolder option enabled or the folder itself.
+			  - To add a parent folder, choose "Add New Location" and add the folder with the "Subfolders 
+			    of this location are also trusted" option check.
+			  - To add the folder itself, choose "Add New Location" and add the folder.
+		*Step 5: Click "OK" on the Trust Center window.
+		*Step 6: Click "OK" on the Access Options window and close Access.
+
+RUNNING THE PROGRAM:
+*Step 1: Start the program and click "Browse". Navigate to the folder you want the Excel File to be placed.
+*Step 2: Click "OK" once folder is highlighted.
+*Step 3: The program will open up Access and ask for the FWD database. Choose the FWD database you want analyzed and
+	 click "OK"
+*Step 4: A Microsoft Access Security Notice might popup many times warning about opening the FWD database. Click "Open"
+	 each time the notice appears on screen.
+*Step 5: Access will close once it is finished and Excel will open. Excel will ask you what you want the output file
+	 named. Enter a filename and click "OK". If the box is left blank, the default filename will be FWDOut.xlsm.
+*Step 6: Excel will then ask if you would like to do a maximum displacement threshold check. Clicking "No" will continue
+	 the program until it is finished. Clicking "Yes" will then create another popup asking what the maximum threshold
+  	 should be flagged at. Enter a number and click OK.
+*Step 7: Excel will close and a message will tell you that the Excel file is ready for viewing.
+
+
+TROUBLESHOOTING:
+* If "ENABLE CONTENT" appears in Access or "ENABLE MACROS" appears while running the program. Check the INITIAL SETTINGS section
+of this document on how to fix the problem.
+* If Access fails, make sure the FWD database has the appropriate tables shown in the REQUIREMENTS section of this document.
