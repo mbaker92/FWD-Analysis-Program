@@ -149,7 +149,10 @@ namespace FWD_Program
             }
             catch(Exception)
             {
-                MessageBox.Show("Close Excel Document FWDOut.xlsm to Continue", "Error", MessageBoxButtons.OK);
+                if(MessageBox.Show("Close Excel Document FWDOut.xlsm to Continue", "Error", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    RenameOldFile();
+                }   
             }
         }
 
@@ -213,7 +216,7 @@ namespace FWD_Program
             oBooks = null;
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oExcel);
             oExcel = null;
-
         }
     }
 }
+
